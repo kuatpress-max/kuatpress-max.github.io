@@ -461,8 +461,9 @@ a{ color: inherit; }
 .svc-name{
   font-family: var(--serif);
   font-weight: 500;
-  font-size: clamp(1.18rem, 1.9vw, 1.42rem);
-  line-height: 1.4;
+  /* 九個字的標題，字級比其他欄位標題小兩級，四欄才不會擠 */
+  font-size: clamp(1rem, 1.4vw, 1.14rem);
+  line-height: 1.5;
   letter-spacing: .03em;
   margin-top: 6px;
   padding-bottom: 16px;
