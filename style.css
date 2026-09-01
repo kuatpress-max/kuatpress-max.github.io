@@ -532,8 +532,9 @@ a{ color: inherit; }
 .card-name{
   font-family: var(--serif);
   font-weight: 500;
-  font-size: clamp(1.12rem, 1.7vw, 1.32rem);
-  line-height: 1.5;
+  /* 與服務項目標題同一層級，字級一起小兩級 */
+  font-size: clamp(.95rem, 1.35vw, 1.06rem);
+  line-height: 1.6;
   letter-spacing: .02em;
   margin-top: 10px;
 }
