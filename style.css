@@ -618,12 +618,17 @@ a{ color: inherit; }
   border-bottom: 1px solid var(--rule);
 }
 
-.era-list{ margin-top: 18px; }
+/* 年代欄位吃比較寬的版面，讓多數條目一行就放得下 */
+@media (min-width: 1240px){
+  #timeline .wrap{ max-width: 1360px; }
+}
+
+.era-list{ margin-top: 16px; }
 .era-item{
   display: grid;
-  grid-template-columns: 46px minmax(0, 1fr);
-  gap: 2px 12px;
-  padding: 11px 0;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 2px 10px;
+  padding: 8px 0;
 }
 .era-y{
   font-family: var(--serif);
