@@ -446,6 +446,8 @@ a{ color: inherit; }
   letter-spacing: .06em;
   padding-top: .42em;
 }
+/* 四位數的數字要縮一級，四欄並排才不會擠到換行 */
+.mile-fig-lg{ font-size: clamp(2.1rem, 3.7vw, 2.85rem); }
 .mile-plus{ font-size: .38em; letter-spacing: .02em; margin-left: 3px; }
 .mile-unit{
   display: block;
