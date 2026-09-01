@@ -322,22 +322,23 @@ a{ color: inherit; }
 .hero-bg img{
   position: absolute;
   top: 50%;
-  right: -4%;
+  left: -4%;
   transform: translateY(-50%);
   width: min(88%, 1080px);
   height: auto;
-  opacity: .5;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 42%);
-  mask-image: linear-gradient(to right, transparent 0%, #000 42%);
+  /* 齊左之後圖會壓到標題底下，透明度再壓低一點保住閱讀性 */
+  opacity: .42;
+  -webkit-mask-image: linear-gradient(to right, #000 0%, #000 46%, transparent 88%);
+  mask-image: linear-gradient(to right, #000 0%, #000 46%, transparent 88%);
 }
 @media (max-width: 899px){
   /* 手機上文字整片壓在圖上，所以再淡一點、只留上半部當氛圍 */
   .hero-bg img{
     top: 0;
-    right: -14%;
+    left: -14%;
     transform: none;
     width: 128%;
-    opacity: .22;
+    opacity: .2;
   }
 }
 
