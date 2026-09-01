@@ -651,6 +651,21 @@ a{ color: inherit; }
   font-size: .875rem;
   line-height: 1.72;
 }
+/* 條目後面的出處小連結 */
+.era-src{
+  margin-left: 6px;
+  font-size: .68rem;
+  letter-spacing: .1em;
+  color: var(--indigo);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  white-space: nowrap;
+}
+.era-src:hover{ border-bottom-color: var(--indigo); }
+
+.glow-links{ margin-top: 4px; }
+.glow-links .link{ font-size: .8rem; color: var(--d-accent); border-bottom-color: var(--d-accent); }
+.glow-links .link:hover{ color: var(--d-txt); border-bottom-color: var(--d-txt); }
 
 /* ── 4-1. 熱門影片：等大封面，點擊就地播放 ────────────── */
 
