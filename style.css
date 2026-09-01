@@ -307,11 +307,27 @@ a{ color: inherit; }
 .hero-fig{ position: relative; }
 .hero-fig .knit{ top: -8%; right: -13%; bottom: -5%; left: -15%; z-index: 0; }
 
-.hero-frame{
+/* 作品照當底圖，人像壓在左下角錯開一半，像雜誌的圖文拼版 */
+.hero-plate{
   position: relative; z-index: 1;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border-radius: 2px;
+  background: var(--paper-2);
+}
+.hero-plate img{
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.hero-frame{
+  position: relative; z-index: 2;
+  width: 58%;
+  margin-top: -24%;
   aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 2px;
+  border: 6px solid var(--paper);
   background: var(--paper-2);
 }
 .hero-frame img{
@@ -320,14 +336,19 @@ a{ color: inherit; }
   object-position: 50% 22%;
   filter: grayscale(.18) contrast(1.03);
 }
+
 .hero-fig figcaption{
-  position: relative; z-index: 1;
+  position: relative; z-index: 2;
   margin-top: 14px;
-  text-align: right;
-  font-size: .72rem;
-  letter-spacing: .18em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 18px;
+  font-size: .7rem;
+  letter-spacing: .16em;
   color: var(--ink-2);
 }
+.hero-cap-n{ color: var(--ink); }
 
 @media (min-width: 900px){
   .hero-grid{ grid-template-columns: minmax(0, 1.18fr) minmax(0, .82fr); }
