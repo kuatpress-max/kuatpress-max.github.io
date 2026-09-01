@@ -552,6 +552,69 @@ a{ color: inherit; }
 
 /* ── 4. YouTube 頻道：兩個主題與訂閱收尾 ──────────────── */
 
+/* ── 4. 媒體怎麼說 ────────────────────────────────────── */
+
+.press-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(28px, 3vw, 40px);
+  border-top: 1px solid var(--rule);
+  padding-top: clamp(28px, 3.2vw, 44px);
+}
+@media (min-width: 640px){
+  .press-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1000px){
+  .press-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.quote-src{
+  font-family: var(--serif);
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  letter-spacing: .03em;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--rule);
+}
+.quote-loc{
+  margin-left: 10px;
+  font-family: var(--sans);
+  font-size: .68rem;
+  letter-spacing: .16em;
+  color: var(--ink-2);
+  vertical-align: 2px;
+}
+.quote-yr{
+  margin-top: 14px;
+  font-size: .7rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--indigo);
+}
+.quote-txt{
+  margin-top: 10px;
+  color: var(--ink-2);
+  font-size: .92rem;
+  line-height: 1.95;
+}
+.quote .link{ font-size: .8rem; margin-top: 14px; }
+
+.press-more{
+  margin-top: clamp(34px, 4vw, 52px);
+  padding-top: clamp(20px, 2.4vw, 28px);
+  border-top: 1px solid var(--rule);
+  color: var(--ink-2);
+  font-size: .82rem;
+  line-height: 2.1;
+}
+.press-more-l{
+  display: block;
+  margin-bottom: 6px;
+  font-size: .68rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
 /* 頻道區的說明就是區塊標題旁的 sec-lead，排版與其他區塊一致 */
 #videos .yt{ margin-top: clamp(34px, 4vw, 52px); }
 
