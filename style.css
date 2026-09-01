@@ -263,6 +263,8 @@ a{ color: inherit; }
 .hero{
   padding-top: 128px;
   padding-bottom: clamp(64px, 9vw, 118px);
+  /* 針目線條刻意超出照片邊界，這裡收邊，避免手機出現左右捲動 */
+  overflow: hidden;
 }
 .hero-grid{
   display: grid;
