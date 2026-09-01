@@ -706,6 +706,17 @@ a{ color: inherit; }
   font-size: .82rem;
   line-height: 2.1;
 }
+/* 媒體名單：每個名字都是連結，中間用細分隔點串起來 */
+.press-more a{
+  display: inline-block;
+  color: var(--ink-2);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+  transition: color .3s var(--ease), border-color .3s var(--ease);
+}
+.press-more a:hover{ color: var(--indigo); border-bottom-color: var(--indigo); }
+.press-sep{ margin: 0 .5em; color: var(--rule); }
 .press-more-l{
   display: block;
   margin-bottom: 6px;
