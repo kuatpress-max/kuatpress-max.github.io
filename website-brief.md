@@ -88,3 +88,9 @@
 - **`不讓殘酷的神支配--內文.pdf`**——本機缺 PDF 讀取工具，檔案打不開，內容與用途未確認。若要放進網站，請直接告訴我它是什麼（例如著作內文），或提供純文字版；在確認之前不會用到頁面上。
 - **YouTube 影片連結**——影片連結統一寫在 `index.html`，用 `<!-- YOUTUBE-LINKS-START -->` 與 `<!-- YOUTUBE-LINKS-END -->` 註解包起來，改網址只要動這一段。尚未指定影片前先放頻道首頁連結。
 - **客戶評價／常見問題／合作流程**——本次不做。之後若要加，請提供真實內容（誰說的、什麼身分、說了什麼／實際問答／實際步驟）。
+
+## 8. 上線資訊
+
+- 線上網址：https://kuatpress-max.github.io/
+- GitHub repo：`kuatpress-max/kuatpress-max.github.io`（public，GitHub Pages 由 main 分支根目錄服務）
+- 每次修改網站檔案後 `git push`，約 30–60 秒後線上更新。

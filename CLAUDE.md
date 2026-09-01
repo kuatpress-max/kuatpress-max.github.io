@@ -91,7 +91,11 @@
 
 ## 部署到 GitHub Pages（做完就上線，並在瀏覽器打開）
 
-這個資料夾已經是 git repo，遠端也已建立，所以**每次改完就自動上線**：
+線上網址：**https://kuatpress-max.github.io/**（repo：`kuatpress-max/kuatpress-max.github.io`，Pages 已啟用）。
+
+遠端已建立，所以**每次改完就自動上線**：
+
+> 這台電腦的 `gh` 沒有加進 PATH，指令要用完整路徑：`& "C:\Program Files\GitHub CLI\gh.exe"`（PowerShell）。git 身分已設在本 repo（Johan Ku / ku.at.press@gmail.com）。
 
 - 改完網站檔案，**自動執行** `git add -A && git commit -m "更新網站" && git push`，不用問要不要 push。
 - Pages 約 30–60 秒後更新，重整瀏覽器即可。
