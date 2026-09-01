@@ -687,6 +687,14 @@ a{ color: inherit; }
   line-height: 1.95;
 }
 .quote .link{ font-size: .8rem; margin-top: 14px; }
+/* 原始網頁已失效，連到網路檔案館的存檔版本 */
+.link-note{
+  margin-left: 8px;
+  font-size: .64rem;
+  letter-spacing: .14em;
+  color: var(--ink-2);
+  vertical-align: 1px;
+}
 
 .press-more{
   margin-top: clamp(34px, 4vw, 52px);
