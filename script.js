@@ -47,26 +47,30 @@
     });
   }
 
-  /* ── 2-1. 大事記：展開／收合補充條目 ─────────────── */
-  var tl = document.getElementById('tl');
-  var tlMore = document.getElementById('tlMore');
+  /* ── 2-1. 熱門影片：點封面就地換成播放器 ─────────── */
+  /* 一開始只載入封面圖，點下去才把 YouTube 播放器放進來，頁面才不會一開始就被拖慢。 */
+  Array.prototype.forEach.call(document.querySelectorAll('.vid'), function (btn) {
+    var id = btn.dataset.yt;
+    var title = (btn.querySelector('.vid-title') || {}).textContent || '影片';
+    if (!id) return;
 
-  if (tl && tlMore) {
-    tlMore.addEventListener('click', function () {
-      var open = !tl.classList.contains('open');
-      tl.classList.toggle('open', open);
-      tlMore.setAttribute('aria-expanded', open ? 'true' : 'false');
-      tlMore.textContent = open ? '收合年表' : '看完整年表';
+    btn.setAttribute('aria-label', '播放影片：' + title);
 
-      // 展開後才出現的條目，直接顯示，不用等捲動
-      if (open) {
-        Array.prototype.forEach.call(
-          tl.querySelectorAll('.is-extra.reveal'),
-          function (el) { el.classList.add('in'); }
-        );
-      }
+    btn.addEventListener('click', function () {
+      if (btn.dataset.playing) return;
+      btn.dataset.playing = '1';
+
+      var media = btn.querySelector('.vid-media');
+      var frame = document.createElement('iframe');
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      frame.title = title;
+      frame.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture; web-share';
+      frame.allowFullscreen = true;
+
+      media.innerHTML = '';
+      media.appendChild(frame);
     });
-  }
+  });
 
   /* ── 3. 軌道進度與目前章節 ───────────────────────── */
   var railFill = document.getElementById('railFill');

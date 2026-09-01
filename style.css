@@ -435,43 +435,53 @@ a{ color: inherit; }
   .mile:last-child{ border-right: 0; }
 }
 
-/* ── 7. 服務項目 ──────────────────────────────────────── */
+/* ── 7. 服務項目：與大事記同一套欄位編排 ──────────────── */
 
-.svc{ border-top: 1px solid var(--rule); }
-.svc-row{
+.svc{
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px clamp(24px, 4vw, 68px);
-  padding: clamp(26px, 3.2vw, 42px) 0;
-  border-bottom: 1px solid var(--rule);
-  transition: padding-left .4s var(--ease), border-color .4s var(--ease);
+  gap: clamp(30px, 3vw, 40px);
+  border-top: 1px solid var(--rule);
+  padding-top: clamp(28px, 3.2vw, 44px);
 }
-.svc-row:hover{ padding-left: 14px; border-bottom-color: var(--indigo); }
+@media (min-width: 680px){
+  .svc{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 1080px){
+  .svc{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .svc-col + .svc-col{ border-left: 1px solid var(--rule); padding-left: clamp(24px, 2.2vw, 38px); }
+}
 
-.svc-name{
-  font-family: var(--serif);
-  font-weight: 500;
-  font-size: clamp(1.15rem, 1.9vw, 1.48rem);
-  line-height: 1.5;
-  letter-spacing: .02em;
-}
 .svc-en{
   font-size: .68rem;
   letter-spacing: .16em;
   text-transform: uppercase;
   color: var(--indigo);
 }
-.svc-desc{
-  color: var(--ink-2);
-  font-size: .95rem;
-  line-height: 2;
+.svc-name{
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(1.18rem, 1.9vw, 1.42rem);
+  line-height: 1.4;
+  letter-spacing: .03em;
+  margin-top: 6px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
 }
-
-@media (min-width: 860px){
-  .svc-row{ grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
-  .svc-name{ grid-column: 1; grid-row: 1; }
-  .svc-en{ grid-column: 1; grid-row: 2; }
-  .svc-desc{ grid-column: 2; grid-row: 1 / span 2; }
+.svc-list{ margin-top: 16px; }
+.svc-list li{
+  position: relative;
+  padding: 7px 0 7px 16px;
+  color: var(--ink-2);
+  font-size: .89rem;
+  line-height: 1.75;
+}
+.svc-list li::before{
+  content: "";
+  position: absolute;
+  left: 0; top: 1.05em;
+  width: 6px; height: 1px;
+  background: var(--rule);
 }
 
 /* ── 5. 過往設計案精選：等大卡片網格 ──────────────────── */
@@ -642,14 +652,93 @@ a{ color: inherit; }
   line-height: 1.72;
 }
 
-/* 展開前先收起補充條目 */
-.era-item.is-extra{ display: none; }
-.eras.open .era-item.is-extra{ display: grid; }
+/* ── 4-1. 熱門影片：等大封面，點擊就地播放 ────────────── */
 
-.tl-more{
-  margin-top: clamp(26px, 3vw, 38px);
-  font-family: var(--sans);
+.vids{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(22px, 2.6vw, 34px);
+  margin-top: 20px;
+}
+@media (min-width: 620px){
+  .vids{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 940px){
+  .vids{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.vid{
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  text-align: left;
+  font: inherit;
+  color: inherit;
   cursor: pointer;
+}
+.vid-media{
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  overflow: hidden;
+  background: var(--ink);
+}
+.vid-media img,
+.vid-media iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+  transition: transform .9s var(--ease), opacity .4s var(--ease);
+}
+.vid:hover .vid-media img{ transform: scale(1.04); opacity: .82; }
+
+/* 播放鍵：一個細圓框加三角形，跟頁面其他線條同一種語彙 */
+.vid-play{
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 54px; height: 54px;
+  margin: -27px 0 0 -27px;
+  border: 1px solid rgba(242,241,237,.85);
+  border-radius: 50%;
+  background: rgba(23,24,26,.32);
+  transition: background .35s var(--ease), border-color .35s var(--ease), transform .35s var(--ease);
+}
+.vid-play::after{
+  content: "";
+  position: absolute;
+  left: 21px; top: 17px;
+  border-style: solid;
+  border-width: 10px 0 10px 16px;
+  border-color: transparent transparent transparent var(--paper);
+}
+.vid:hover .vid-play{
+  background: var(--indigo);
+  border-color: var(--indigo);
+  transform: scale(1.06);
+}
+
+.vid-title{
+  display: block;
+  margin-top: 14px;
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: .02em;
+}
+.vid-views{
+  display: block;
+  margin-top: 7px;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  color: var(--ink-2);
 }
 
 /* ── 6. 著作 ──────────────────────────────────────────── */
@@ -695,6 +784,28 @@ a{ color: inherit; }
   line-height: 2;
   max-width: 46ch;
 }
+.book-quote{
+  margin-top: 22px;
+  padding-left: 20px;
+  border-left: 1px solid var(--indigo);
+  max-width: 44ch;
+}
+.book-quote p{
+  font-family: var(--serif);
+  font-size: 1.02rem;
+  line-height: 1.9;
+  letter-spacing: .02em;
+}
+.book-quote cite{
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-size: .76rem;
+  letter-spacing: .12em;
+  color: var(--ink-2);
+}
+.book-links .link{ font-size: .82rem; }
+
 .book-cta{
   margin-top: clamp(24px, 3vw, 34px);
   display: flex;
