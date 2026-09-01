@@ -552,29 +552,15 @@ a{ color: inherit; }
 
 /* ── 4. YouTube 頻道：兩個主題與訂閱收尾 ──────────────── */
 
-.topics{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(24px, 3vw, 44px);
+/* 頻道的一句話說明：整段話就是這一區的主張，給它比內文大一點的字級 */
+.channel-note{
   border-top: 1px solid var(--rule);
   padding-top: clamp(28px, 3.5vw, 44px);
-}
-@media (min-width: 780px){
-  .topics{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-.topic-name{
   font-family: var(--serif);
-  font-weight: 500;
-  font-size: clamp(1.15rem, 2vw, 1.42rem);
-  line-height: 1.5;
-  letter-spacing: .02em;
-}
-.topic-desc{
-  margin-top: 14px;
-  color: var(--ink-2);
-  font-size: .95rem;
+  font-size: clamp(1.05rem, 1.8vw, 1.32rem);
   line-height: 2;
-  max-width: 46ch;
+  letter-spacing: .02em;
+  max-width: 40ch;
 }
 
 .sub-cta{
