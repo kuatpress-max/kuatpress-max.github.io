@@ -832,6 +832,25 @@ a{ color: inherit; }
   font-size: .875rem;
   line-height: 1.72;
 }
+/* 一個年份底下的多筆數字，用細短線串成一小落 */
+.era-stats{
+  display: block;
+  margin-top: 6px;
+}
+.era-stats span{
+  display: block;
+  position: relative;
+  padding-left: 14px;
+  line-height: 1.9;
+}
+.era-stats span::before{
+  content: "";
+  position: absolute;
+  left: 0; top: .95em;
+  width: 6px; height: 1px;
+  background: var(--rule);
+}
+
 /* 條目後面的出處小連結 */
 .era-src{
   margin-left: 6px;
