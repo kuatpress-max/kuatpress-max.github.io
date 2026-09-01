@@ -628,7 +628,7 @@ a{ color: inherit; }
   display: grid;
   grid-template-columns: 42px minmax(0, 1fr);
   gap: 2px 10px;
-  padding: 8px 0;
+  padding: 7px 0;
 }
 .era-y{
   font-family: var(--serif);
@@ -638,8 +638,8 @@ a{ color: inherit; }
 }
 .era-t{
   color: var(--ink-2);
-  font-size: .89rem;
-  line-height: 1.85;
+  font-size: .875rem;
+  line-height: 1.72;
 }
 
 /* 展開前先收起補充條目 */
