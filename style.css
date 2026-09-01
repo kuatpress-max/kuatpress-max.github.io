@@ -625,6 +625,44 @@ a{ color: inherit; }
   max-width: 40ch;
 }
 
+/* ── 5. 歷年大事記 ────────────────────────────────────── */
+
+.tl{ border-top: 1px solid var(--rule); }
+.tl-row{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px clamp(24px, 4vw, 56px);
+  align-items: baseline;
+  padding: clamp(20px, 2.4vw, 30px) 0;
+  border-bottom: 1px solid var(--rule);
+}
+@media (min-width: 720px){
+  .tl-row{ grid-template-columns: 132px minmax(0, 1fr); }
+}
+.tl-year{
+  font-family: var(--serif);
+  font-size: clamp(1.25rem, 2.2vw, 1.62rem);
+  letter-spacing: .04em;
+  color: var(--ink);
+  font-variant-numeric: lining-nums;
+}
+.tl-txt{
+  color: var(--ink-2);
+  font-size: .95rem;
+  line-height: 2;
+  max-width: 62ch;
+}
+
+/* 展開前先收起補充條目 */
+.tl-row.is-extra{ display: none; }
+.tl.open .tl-row.is-extra{ display: grid; }
+
+.tl-more{
+  margin-top: clamp(26px, 3vw, 38px);
+  font-family: var(--sans);
+  cursor: pointer;
+}
+
 /* ── 夜光針織：作品案例的收尾大圖 ─────────────────────── */
 
 .glow{

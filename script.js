@@ -47,6 +47,27 @@
     });
   }
 
+  /* ── 2-1. 大事記：展開／收合補充條目 ─────────────── */
+  var tl = document.getElementById('tl');
+  var tlMore = document.getElementById('tlMore');
+
+  if (tl && tlMore) {
+    tlMore.addEventListener('click', function () {
+      var open = !tl.classList.contains('open');
+      tl.classList.toggle('open', open);
+      tlMore.setAttribute('aria-expanded', open ? 'true' : 'false');
+      tlMore.textContent = open ? '收合年表' : '看完整年表';
+
+      // 展開後才出現的條目，直接顯示，不用等捲動
+      if (open) {
+        Array.prototype.forEach.call(
+          tl.querySelectorAll('.is-extra.reveal'),
+          function (el) { el.classList.add('in'); }
+        );
+      }
+    });
+  }
+
   /* ── 3. 軌道進度與目前章節 ───────────────────────── */
   var railFill = document.getElementById('railFill');
   var dots = Array.prototype.slice.call(document.querySelectorAll('.rail-dot'));
