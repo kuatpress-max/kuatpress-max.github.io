@@ -47,6 +47,51 @@
     });
   }
 
+  /* ── 2-0. 剪報：點縮圖看大圖 ─────────────────────── */
+  var clipBtns = document.querySelectorAll('.clip-btn');
+
+  if (clipBtns.length) {
+    var box = document.createElement('div');
+    box.className = 'lightbox';
+    box.hidden = true;
+    box.innerHTML =
+      '<button class="lightbox-close" type="button" aria-label="關閉大圖">×</button><img alt="">';
+    document.body.appendChild(box);
+
+    var boxImg = box.querySelector('img');
+    var lastFocus = null;
+
+    function closeBox() {
+      box.hidden = true;
+      boxImg.removeAttribute('src');
+      document.body.style.overflow = '';
+      if (lastFocus) lastFocus.focus();
+    }
+
+    Array.prototype.forEach.call(clipBtns, function (btn) {
+      var thumb = btn.querySelector('img');
+      btn.setAttribute('aria-label', '放大檢視：' + (thumb ? thumb.alt : '剪報'));
+
+      btn.addEventListener('click', function () {
+        lastFocus = btn;
+        boxImg.src = btn.dataset.full;
+        boxImg.alt = thumb ? thumb.alt : '';
+        box.hidden = false;
+        document.body.style.overflow = 'hidden';
+        box.querySelector('.lightbox-close').focus();
+      });
+    });
+
+    box.addEventListener('click', function (e) {
+      // 點大圖以外的地方就關掉
+      if (e.target !== boxImg) closeBox();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !box.hidden) closeBox();
+    });
+  }
+
   /* ── 2-1. 熱門影片：點封面就地換成播放器 ─────────── */
   /* 一開始只載入封面圖，點下去才把 YouTube 播放器放進來，頁面才不會一開始就被拖慢。 */
   Array.prototype.forEach.call(document.querySelectorAll('.vid'), function (btn) {
