@@ -11,11 +11,11 @@
 ## 網站名稱與定位
 
 - 網站名稱：Johan Ku 古又文
-- 一句話定位：結合 20 年國際時裝週與時裝設計實務經驗，深度解讀全球時尚產業、精品集團策略與設計工藝美學。
+- 一句話定位：用 20 年設計實務與國際時裝週經驗，帶時尚愛好者看懂精品產業與服裝設計。
 
 ## 可用素材與真實資料（訪談階段已讀過，直接拿來用）
 
-這些是從 `Profile.txt` 與 `FACE.jpg` 實際讀出來的內容，**做網站時直接用，不要重問、也不要另外編一套**。詳細版在 `website-brief.md` 第 0 節。
+這些是從 `Profile.txt`、`FACE.jpg`、`Emotional Sculpture_2004.jpg` 實際讀出來的內容，**做網站時直接用，不要重問、也不要另外編一套**。詳細版在 `website-brief.md` 第 0 節。
 
 - 姓名／職稱：Johan Ku 古又文｜時裝設計師 / 時尚產業分析師 / 內容創作者；英國時裝協會（BFC）會員
 - 聯絡方式：
@@ -28,38 +28,40 @@
 - 經歷與技能重點：20+ 年時裝設計與品牌營運實務；2009 年以「Emotional Sculpture」獲紐約 Gen Art 前衛時裝大獎（Vanguard Prize）；Johan Ku Gold Label 多次登上 BFC 倫敦時裝週與東京時裝週官方日程；YouTube 頻道全平台超過 15 萬訂閱；專長為立體針織雕塑、前衛材質、高級訂製，以及 LVMH／Kering／Hermès 等精品集團策略分析。
 - 代表作品：Emotional Sculpture 雕塑針織系列／Johan Ku Gold Label 倫敦與東京時裝週發表（含 The Two Faces 夜光針織）／YouTube 深度時尚產業評論。
 - 圖片（相對路徑 → 用在哪個區塊，全部要補 alt）：
-  - `./FACE.jpg` → 開頭自我介紹、關於我（alt 寫「時裝設計師 Johan Ku 古又文」）
-  - 作品圖：（待補，還沒有任何作品照片）
+  - `./FACE.jpg` → 開頭自我介紹、關於我（alt：「時裝設計師 Johan Ku 古又文」）
+  - `./Emotional%20Sculpture_2004.jpg` → 作品案例代表作一（alt：「Emotional Sculpture 米白色粗針織雕塑外套」）。**檔名有空格，HTML 一定要寫成 `%20`。**
+  - `./work-london-fashion-week.jpg` → 作品案例代表作二（alt：「Johan Ku Gold Label 倫敦時裝週黑色粗針織單肩造型」）
+  - `./work-tokyo-fashion-week.jpg` → 作品案例代表作二（alt：「The Two Faces 夜光針織禮服於東京時裝週發表，左為常光、右為夜光」）
+  - `./不讓殘酷的神支配--內文.pdf`：（待補，本機讀不開、用途未確認，先不要用）
 - 標「（待補）」的欄位：頁面上先留合理的佔位文字或直接不放該項，**不要自己編造經歷、數字或客戶名單**。
 
 ## 目標受眾
 
-- 對象：關注時尚產業的觀眾與讀者（YouTube 觀眾、想搞懂精品產業與時裝週的人）。
-- 我能幫他們解決的問題：讓他們一次看到 Johan Ku 所有的內容——影片、產業評論、設計作品、選品推薦全部集中在一頁，不用到處找。
-- 因此網站文案要優先回答的問題：「這個人是誰、憑什麼講時尚產業、他的內容在哪裡看？」
+- 對象：關注時尚產業的觀眾與讀者為主（YouTube 觀眾）；品牌／媒體合作方、設計科系學生與同行為輔。
+- 我能幫他們解決的問題：讓他們看懂精品產業正在發生什麼事（時裝週、創意總監更迭、集團財報與併購），也能從設計師角度看懂衣服與服裝設計（針織、材質、剪裁、工藝）。
+- 因此網站文案要優先回答的問題：「這個人是誰、憑什麼講時尚產業、他的內容在哪裡看？」文案以一般觀眾看得懂為準，不要寫成產業內行話。
 
 ## 網站目標與行動
 
-- 主要目標：建立一個完整的官方據點，集中所有身分、作品與內容出口。
-- 主要行動按鈕：「前往 YouTube 頻道」→ https://www.youtube.com/@JohanKu
+- 主要目標：介紹 Johan Ku 這個人，並把觀眾帶去訂閱 YouTube 頻道。
+- 主要行動按鈕：「訂閱 YouTube 頻道」→ https://www.youtube.com/@JohanKu
 - 次要行動按鈕：「商業合作洽詢」→ `mailto:info@johanku.co.uk`
 
 ## 頁面結構（一頁式，依順序）
 
 1. 開頭自我介紹（Hero）：網站名稱、核心標語、`./FACE.jpg`、兩顆行動按鈕
 2. 關於我：Profile.txt 完整版簡介＋四個里程碑（20+ 年／2009 Gen Art 大獎／倫敦・東京時裝週／15 萬訂閱）
-3. 服務項目：產業趨勢與商業分析、服裝設計與特殊訂製、趨勢演講與專欄撰寫、品牌顧問與選品策劃
-4. 作品案例：三個代表作＋YouTube 影片連結卡片
-5. 客戶評價：（待補）先放結構與佔位說明，不要編造評價
-6. 常見問題：（待補）先放結構，不要編造問答
-7. 合作流程：（待補）先放結構，不要編造步驟
-8. 聯絡方式：info@johanku.co.uk ＋ 全部社群連結
+3. YouTube 影片：影片卡片區（連結可隨時替換，見下一節）
+4. 作品案例：三個代表作；代表作一放 `./Emotional%20Sculpture_2004.jpg`，代表作二放 `./work-london-fashion-week.jpg` 與 `./work-tokyo-fashion-week.jpg`，代表作三（YouTube 評論）用文字＋連結
+5. 服務項目：產業趨勢與商業分析、服裝設計與特殊訂製、趨勢演講與專欄撰寫、品牌顧問與選品策劃
+6. 聯絡方式：info@johanku.co.uk ＋ 全部社群連結
 
-- **成品至少要有 6 個區塊**（這裡是 8 個），每個區塊都要有實質內容（標題＋幾句文案／幾個項目），不要只放一個標題就帶過。
+- **共 6 個區塊，每個區塊都要有實質內容**（標題＋幾句文案／幾個項目），不要只放一個標題就帶過。
+- **不要做「客戶評價」「常見問題」「合作流程」三個區塊**——目前沒有真實內容，不做空殼區塊，也絕對不要編造。
 
 ## YouTube 影片連結要能隨時更新（使用者明確要求）
 
-- 作品案例區的 YouTube 連結，統一放在 `index.html` 裡用註解包起來的一段：
+- YouTube 影片連結統一放在 `index.html` 裡用註解包起來的一段：
   `<!-- YOUTUBE-LINKS-START -->` … `<!-- YOUTUBE-LINKS-END -->`
 - 這段裡每支影片一張卡片（標題＋連結），改影片只要動這一段，不要把連結散在各處。
 - 使用者還沒指定影片時，先放頻道首頁 https://www.youtube.com/@JohanKu，並在註解裡寫一行「換影片改這裡」。
@@ -85,30 +87,23 @@
 - **絕對不要使用 React／Vue／Next.js 等框架，不要 npm install、不要 build 步驟、不要打包工具。** 若 frontend-design 想搭框架，一律改回原生 HTML/CSS/JS。
 - **CSS、JS、圖片一律用相對路徑 `./`**（例如 `./style.css`、`./FACE.jpg`）。
 - 所有內容寫在單一頁面，用錨點連結切換段落。手機版需正常顯示。
+- **`不讓殘酷的神支配--內文.pdf`（93MB）已寫進 `.gitignore`，不要 commit、不要 push**，避免 repo 過大。
 
 ## 部署到 GitHub Pages（做完就上線，並在瀏覽器打開）
 
-**首次部署（部署到使用者主站，網址沒有子目錄）：**
-
-1. 取得 GitHub 帳號名：`OWNER=$(gh api user --jq .login)`
-2. **repo 名稱一定要用 `<帳號>.github.io`**，會服務在網域根、網址沒有子目錄。
-3. 在專案資料夾依序執行（若已是 git repo 就跳過 init）：
-   ```
-   git init
-   git add -A
-   git commit -m "初始個人品牌網站"
-   gh repo create "$OWNER.github.io" --public --source=. --remote=origin --push
-   gh api --method POST "repos/$OWNER/$OWNER.github.io/pages" -f "source[branch]=main" -f "source[path]=/"
-   ```
-   （最後一行啟用 Pages；若回「已存在」的錯誤，忽略即可。）
-4. 網址為 `https://<帳號>.github.io/`。首次建置約需 1 分鐘，用瀏覽器打開展示；若一開始 404，稍等後重整。
-   - 每個帳號只能有一個主站 repo；若已存在就 push 到既有 repo，不要重建。
-   - **要打開的一定是線上網址，絕對不要在瀏覽器開本機的 `index.html`（`file://`）。**
-
-**之後每次修改都自動上線：**
+這個資料夾已經是 git repo，遠端也已建立，所以**每次改完就自動上線**：
 
 - 改完網站檔案，**自動執行** `git add -A && git commit -m "更新網站" && git push`，不用問要不要 push。
 - Pages 約 30–60 秒後更新，重整瀏覽器即可。
+
+若還沒建立遠端（例如換一台電腦重來）：
+
+1. 取得帳號名：`OWNER=$(gh api user --jq .login)`
+2. **repo 名稱一定要用 `<帳號>.github.io`**（網址在網域根、沒有子目錄）
+3. `git init` → `git add -A` → `git commit -m "初始個人品牌網站"` → `gh repo create "$OWNER.github.io" --public --source=. --remote=origin --push` → `gh api --method POST "repos/$OWNER/$OWNER.github.io/pages" -f "source[branch]=main" -f "source[path]=/"`
+4. 網址為 `https://<帳號>.github.io/`，首次建置約 1 分鐘；一開始 404 就稍等後重整。
+   - 每個帳號只能有一個主站 repo；已存在就 push 到既有 repo，不要重建。
+   - **要打開的一定是線上網址，絕對不要在瀏覽器開本機的 `index.html`（`file://`）。**
 
 ## 不要起本機伺服器、不要自己做預覽檔
 
@@ -122,17 +117,17 @@
 
 ## 完工前品質檢查
 
-- [ ] `index.html`／`style.css`／`script.js` 與 `FACE.jpg` 都在，沒有框架、沒有 node_modules、沒有 build 產物。
-- [ ] CSS／JS／圖片全部用相對路徑 `./`。
+- [ ] `index.html`／`style.css`／`script.js`、`FACE.jpg`、`Emotional Sculpture_2004.jpg`、`work-london-fashion-week.jpg`、`work-tokyo-fashion-week.jpg` 都在，沒有框架、沒有 node_modules、沒有 build 產物。
+- [ ] CSS／JS／圖片全部用相對路徑 `./`；有空格的檔名寫成 `%20`。
 - [ ] hero 主標題一行講清楚「我幫誰解決什麼」。
 - [ ] 內容用的是 `website-brief.md` 的真實文字，沒有 lorem ipsum 或假資料。
-- [ ] 客戶評價／常見問題／合作流程三區沒有編造內容。
+- [ ] 沒有出現客戶評價／常見問題／合作流程這三個空殼區塊。
 - [ ] YouTube 連結區有 `<!-- YOUTUBE-LINKS-START/END -->` 註解，方便隨時替換。
 - [ ] 手機版不爆版，圖片都有 alt。
 
 ## 素材位置
 
 - 主要依據：`website-brief.md`（第 0 節是素材清單與從 Profile.txt 抓出的真實資料）＋ 上面的「可用素材與真實資料」。**素材在訪談階段就已經讀完並整理進文件，不用再從頭研究一次。**
-- 動工前快速掃一次資料夾，確認：文件列的檔案還在；有沒有訪談後才新增的素材（作品圖、評價、FAQ）——有就讀進來補進文案，並同步更新 `website-brief.md` 第 0 節與第 7 節。
+- 動工前快速掃一次資料夾，確認：文件列的檔案還在；有沒有訪談後才新增的素材（新作品圖）——有就讀進來補進文案，並同步更新 `website-brief.md` 第 0 節與第 7 節。
 - 圖片一律用相對路徑並補上 alt。
 - 找不到的資訊寧可標「（待補）」或詢問，不要編造經歷、數字或客戶案例。
