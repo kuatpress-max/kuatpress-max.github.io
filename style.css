@@ -322,7 +322,7 @@ a{ color: inherit; }
 .hero-bg img{
   position: absolute;
   top: 50%;
-  left: -4%;
+  left: 8%;
   transform: translateY(-50%);
   width: min(88%, 1080px);
   height: auto;
