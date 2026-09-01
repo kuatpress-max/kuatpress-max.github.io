@@ -1084,7 +1084,7 @@ a{ color: inherit; }
   border-bottom: 1px solid var(--rule);
 }
 .reader-back,
-.reader-open{
+.reader-note{
   font-size: .78rem;
   letter-spacing: .12em;
   color: var(--ink-2);
@@ -1092,8 +1092,8 @@ a{ color: inherit; }
   white-space: nowrap;
   transition: color .3s var(--ease);
 }
-.reader-back:hover,
-.reader-open:hover{ color: var(--indigo); }
+.reader-back:hover{ color: var(--indigo); }
+.reader-note{ letter-spacing: .2em; }
 .reader-title{ text-align: center; line-height: 1.4; }
 .reader-name{
   display: block;
