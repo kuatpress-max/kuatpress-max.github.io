@@ -277,18 +277,21 @@ a{ color: inherit; }
   align-items: center;
 }
 
-/* 標題壓在底圖上，後面刷一層漸淡的紙色，讓字跳出來又看不出方框 */
-.hero-h1{ position: relative; }
-.hero-h1::before{
+/* 標題與內文壓在底圖上，後面刷一層漸淡的紙色，讓字跳出來又看不出方框 */
+.hero-h1,
+.hero-lead{ position: relative; }
+.hero-h1::before,
+.hero-lead::before{
   content: "";
   position: absolute;
   inset: -.42em -1.6em -.34em -1.1em;
   z-index: -1;
   background: radial-gradient(115% 100% at 34% 50%,
-    rgba(242, 241, 237, .95) 0%,
-    rgba(242, 241, 237, .88) 42%,
+    rgba(242, 241, 237, .6) 0%,
+    rgba(242, 241, 237, .54) 42%,
     rgba(242, 241, 237, 0) 76%);
 }
+.hero-lead::before{ inset: -.6em -1.4em -.5em -1em; }
 
 .hero-h1{
   font-family: var(--serif);
