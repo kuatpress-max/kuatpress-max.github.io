@@ -604,12 +604,7 @@ a{ color: inherit; }
 }
 @media (min-width: 680px){
   .eras{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (min-width: 1080px){
-  .eras{ grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(28px, 2.6vw, 44px); }
-  /* 欄與欄之間一條細線，像年表的刻度 */
-  .era + .era{ border-left: 1px solid var(--rule); padding-left: clamp(24px, 2.2vw, 38px); }
-  /* 「走向國際」事情最多，佔兩欄，條目平均流進左右兩邊 */
+  /* 「走向國際」事情最多，一律佔兩欄，條目平均流進左右兩邊 */
   .era-wide{ grid-column: span 2; }
   .era-list-2col{
     column-count: 2;
@@ -617,6 +612,11 @@ a{ color: inherit; }
     column-rule: 1px solid var(--rule);
   }
   .era-list-2col .era-item{ break-inside: avoid; }
+}
+@media (min-width: 1080px){
+  .eras{ grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(28px, 2.6vw, 44px); }
+  /* 欄與欄之間一條細線，像年表的刻度 */
+  .era + .era{ border-left: 1px solid var(--rule); padding-left: clamp(24px, 2.2vw, 38px); }
 }
 
 .era-span{
