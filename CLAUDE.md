@@ -20,7 +20,7 @@
 - 姓名／職稱：Johan Ku 古又文｜時裝設計師 / 時尚產業分析師 / 內容創作者；英國時裝協會（BFC）會員
 - 聯絡方式：
   - Email：info@johanku.co.uk
-  - YouTube：https://www.youtube.com/@JohanKu
+  - YouTube：https://www.youtube.com/@JohanKu-YT
   - Facebook：https://www.facebook.com/johankudesign
   - Instagram：https://instagram.com/johanku_ig
   - TikTok：https://www.tiktok.com/@johanku_tk
@@ -44,7 +44,7 @@
 ## 網站目標與行動
 
 - 主要目標：介紹 Johan Ku 這個人，並把觀眾帶去訂閱 YouTube 頻道。
-- 主要行動按鈕：「訂閱 YouTube 頻道」→ https://www.youtube.com/@JohanKu
+- 主要行動按鈕：「訂閱 YouTube 頻道」→ https://www.youtube.com/@JohanKu-YT
 - 次要行動按鈕：「商業合作洽詢」→ `mailto:info@johanku.co.uk`
 
 ## 頁面結構（一頁式，依順序）
@@ -64,7 +64,7 @@
 - YouTube 影片連結統一放在 `index.html` 裡用註解包起來的一段：
   `<!-- YOUTUBE-LINKS-START -->` … `<!-- YOUTUBE-LINKS-END -->`
 - 這段裡每支影片一張卡片（標題＋連結），改影片只要動這一段，不要把連結散在各處。
-- 使用者還沒指定影片時，先放頻道首頁 https://www.youtube.com/@JohanKu，並在註解裡寫一行「換影片改這裡」。
+- 使用者還沒指定影片時，先放頻道首頁 https://www.youtube.com/@JohanKu-YT，並在註解裡寫一行「換影片改這裡」。
 
 ## 文案規範
 

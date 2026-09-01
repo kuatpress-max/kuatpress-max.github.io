@@ -21,7 +21,7 @@
 - 職稱／頭銜：時裝設計師 / 時尚產業分析師 / 內容創作者；設計師品牌創辦人；英國時裝協會（BFC）會員
 - 聯絡方式：
   - 合作聯絡信箱：info@johanku.co.uk
-  - YouTube：https://www.youtube.com/@JohanKu
+  - YouTube：https://www.youtube.com/@JohanKu-YT
   - Facebook：https://www.facebook.com/johankudesign
   - Instagram：https://instagram.com/johanku_ig
   - TikTok：https://www.tiktok.com/@johanku_tk
@@ -50,7 +50,7 @@
 
 - 最重要的一件事：介紹 Johan Ku 這個人是誰，並把觀眾帶去訂閱 YouTube 頻道。
 - 由此推出的訪客行動：
-  - 主要行動：訂閱 YouTube 頻道「Johan Ku 古又文」（https://www.youtube.com/@JohanKu）
+  - 主要行動：訂閱 YouTube 頻道「Johan Ku 古又文」（https://www.youtube.com/@JohanKu-YT）
   - 次要行動：商業合作洽詢，寄信到 info@johanku.co.uk
   - 其他出口：Facebook、Instagram、TikTok、ShopMy 選品
 
