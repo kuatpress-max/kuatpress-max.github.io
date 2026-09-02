@@ -168,7 +168,8 @@ a{ color: inherit; }
 
 .brand{
   display: flex; align-items: center;
-  margin-right: auto; text-decoration: none;
+  /* 識別標誌靠右，與導覽列成為同一組 */
+  margin-left: auto; text-decoration: none;
 }
 .brand img{
   width: auto;
@@ -1083,8 +1084,9 @@ a{ color: inherit; }
 }
 .book-quote p{
   font-family: var(--serif);
-  font-size: 1.02rem;
-  line-height: 1.9;
+  /* 阿信那段是這一區的重點，字級比內文大兩級 */
+  font-size: clamp(1.15rem, 1.9vw, 1.35rem);
+  line-height: 1.85;
   letter-spacing: .02em;
 }
 .book-quote cite{
