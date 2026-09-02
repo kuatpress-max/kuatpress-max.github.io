@@ -894,17 +894,20 @@ a{ color: inherit; }
   background: var(--rule);
 }
 
-/* 條目後面的出處小連結 */
-.era-src{
-  margin-left: 6px;
-  font-size: .68rem;
-  letter-spacing: .1em;
-  color: var(--indigo);
+/* 有出處的條目，整句話就是連結：平常只有一條極淡的底線，滑過才變色 */
+.era-link{
+  color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid var(--rule);
-  white-space: nowrap;
+  background-image: linear-gradient(var(--rule), var(--rule));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 1px;
+  transition: color .3s var(--ease), background-image .3s var(--ease);
 }
-.era-src:hover{ border-bottom-color: var(--indigo); }
+.era-link:hover{
+  color: var(--indigo);
+  background-image: linear-gradient(var(--indigo), var(--indigo));
+}
 
 .glow-links{ margin-top: 4px; }
 .glow-links .link{ font-size: .8rem; color: var(--d-accent); border-bottom-color: var(--d-accent); }
