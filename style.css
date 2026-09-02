@@ -1049,13 +1049,13 @@ a{ color: inherit; }
   flex-wrap: wrap;
   align-items: baseline;
   gap: 4px 12px;
-  padding: 5px 0;
+  padding: 4px 0;
 }
 .praise-n{
   font-family: var(--serif);
   font-size: 1rem;
   letter-spacing: .04em;
-  min-width: 9.5em;
+  min-width: 7.5em;
 }
 .praise-r{
   font-size: .82rem;
