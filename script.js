@@ -87,6 +87,16 @@
       if (e.target !== boxImg) closeBox();
     });
 
+    // 大事記裡的「看剪報」直接把對應的那張圖叫出來
+    Array.prototype.forEach.call(document.querySelectorAll('[data-open-clip]'), function (link) {
+      link.addEventListener('click', function (e) {
+        var target = document.getElementById(link.dataset.openClip);
+        if (!target) return; // 找不到就讓它照原本的錨點跳過去
+        e.preventDefault();
+        target.click();
+      });
+    });
+
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && !box.hidden) closeBox();
     });
