@@ -146,6 +146,8 @@ a{ color: inherit; }
 
 .hdr{
   position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  /* 首頁的主視覺底圖會鋪到頁首下方，所以選單列一律給實心紙色底 */
+  background: var(--paper);
   transition: background .4s var(--ease), border-color .4s var(--ease);
   border-bottom: 1px solid transparent;
 }
@@ -168,8 +170,8 @@ a{ color: inherit; }
 
 .brand{
   display: flex; align-items: center;
-  /* 識別標誌靠右，與導覽列成為同一組 */
-  margin-left: auto; text-decoration: none;
+  /* 識別標誌回到左上角，兼作回首頁的入口 */
+  margin-right: auto; text-decoration: none;
 }
 .brand img{
   width: auto;
