@@ -1055,7 +1055,7 @@ a{ color: inherit; }
   font-family: var(--serif);
   font-size: 1rem;
   letter-spacing: .04em;
-  min-width: 6.5em;
+  min-width: 9.5em;
 }
 .praise-r{
   font-size: .82rem;
@@ -1064,7 +1064,7 @@ a{ color: inherit; }
 }
 
 .book-quote{
-  margin-top: 22px;
+  margin-top: 20px;
   padding-left: 20px;
   border-left: 1px solid var(--indigo);
   max-width: 44ch;
@@ -1083,6 +1083,7 @@ a{ color: inherit; }
   letter-spacing: .12em;
   color: var(--ink-2);
 }
+.book-quote + .book-quote{ margin-top: 16px; }
 .book-links .link{ font-size: .82rem; }
 
 .book-cta{
