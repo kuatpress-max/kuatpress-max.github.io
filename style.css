@@ -20,7 +20,7 @@
   --d-rule:  #2E3034;
   --d-accent:#A8B6D6;
 
-  --serif: "Bodoni Moda", "Noto Serif TC", Georgia, "Songti TC", "PMingLiU", serif;
+  /* 全站統一使用無襯線黑體（使用者指定），襯線體已全部移除 */
   --sans:  "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", sans-serif;
 
   --maxw: 1180px;
@@ -538,7 +538,7 @@ a{ color: inherit; }
   color: var(--indigo);
 }
 .svc-name{
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 500;
   /* 九個字的標題，字級比其他欄位標題小兩級，四欄才不會擠 */
   font-size: clamp(1rem, 1.4vw, 1.14rem);
@@ -609,7 +609,7 @@ a{ color: inherit; }
   color: var(--ink-2);
 }
 .card-name{
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 500;
   /* 與服務項目標題同一層級，字級一起小兩級 */
   font-size: clamp(.95rem, 1.35vw, 1.06rem);
@@ -740,7 +740,7 @@ a{ color: inherit; }
 }
 
 .quote-src{
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: clamp(1.1rem, 1.8vw, 1.3rem);
   letter-spacing: .03em;
   padding-bottom: 12px;
@@ -851,13 +851,13 @@ a{ color: inherit; }
 }
 
 .era-span{
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.02rem;
   letter-spacing: .08em;
   color: var(--indigo);
 }
 .era-name{
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 500;
   font-size: clamp(1.2rem, 1.9vw, 1.42rem);
   line-height: 1.4;
@@ -880,7 +880,7 @@ a{ color: inherit; }
   padding: 7px 0;
 }
 .era-y{
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: .95rem;
   letter-spacing: .04em;
   color: var(--ink);
@@ -1003,7 +1003,7 @@ a{ color: inherit; }
 .vid-title{
   display: block;
   margin-top: 14px;
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.02rem;
   font-weight: 500;
   line-height: 1.6;
@@ -1040,7 +1040,7 @@ a{ color: inherit; }
 .book-cover img{ width: 100%; height: auto; display: block; }
 
 .book-name{
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 500;
   font-size: clamp(1.6rem, 3.2vw, 2.35rem);
   line-height: 1.35;
@@ -1085,7 +1085,7 @@ a{ color: inherit; }
   padding: 4px 0;
 }
 .praise-n{
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1rem;
   letter-spacing: .04em;
   min-width: 7.5em;
@@ -1103,7 +1103,7 @@ a{ color: inherit; }
   max-width: 44ch;
 }
 .book-quote p{
-  font-family: var(--serif);
+  font-family: var(--sans);
   /* 阿信那段是這一區的重點，字級比內文大兩級 */
   font-size: clamp(1.15rem, 1.9vw, 1.35rem);
   line-height: 1.85;
@@ -1158,7 +1158,7 @@ a{ color: inherit; }
 .reader-title{ text-align: center; line-height: 1.4; }
 .reader-name{
   display: block;
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-size: 1.02rem;
   letter-spacing: .04em;
 }
@@ -1187,7 +1187,7 @@ a{ color: inherit; }
   text-align: center;
 }
 .reader-fb-title{
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 500;
   font-size: clamp(1.5rem, 4vw, 2rem);
   line-height: 1.4;
@@ -1248,7 +1248,7 @@ a{ color: inherit; }
 
 .mailto{
   display: block;
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 400;
   font-size: clamp(1.45rem, 5vw, 3.1rem);
   line-height: 1.3;
