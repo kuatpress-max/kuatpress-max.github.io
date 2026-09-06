@@ -314,7 +314,7 @@ a{ color: inherit; }
 .hero-lead::before{ inset: -.6em -1.4em -.5em -1em; }
 
 .hero-h1{
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 500;
   font-size: clamp(2.05rem, 4.7vw, 3.85rem);
   line-height: 1.34;
