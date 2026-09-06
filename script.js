@@ -12,6 +12,38 @@
 
   var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ── 0. 語言：記住選擇，第一次到訪依瀏覽器語言自動帶 ─── */
+  var LANG_KEY = 'johanku-lang';
+  var pageLang = document.documentElement.lang.indexOf('zh') === 0 ? 'zh' : 'en';
+
+  function readLang() {
+    try { return localStorage.getItem(LANG_KEY); } catch (e) { return null; }
+  }
+  function saveLang(v) {
+    try { localStorage.setItem(LANG_KEY, v); } catch (e) {}
+  }
+
+  // 手動切換：先記住選擇，之後就不會再被自動導走
+  Array.prototype.forEach.call(document.querySelectorAll('[data-lang-switch]'), function (el) {
+    el.addEventListener('click', function () { saveLang(el.dataset.langSwitch); });
+  });
+
+  (function autoLang() {
+    // 搜尋引擎不要導向，否則另一個語言版本會收錄不到
+    if (/bot|crawl|spider|slurp|googlebot|bingpreview|baiduspider|yandex|duckduckbot|facebookexternalhit|twitterbot|linkedinbot|slackbot|whatsapp|embedly/i.test(navigator.userAgent)) return;
+
+    var want = readLang();
+    if (!want) {
+      var nav = (navigator.language || '').toLowerCase();
+      want = nav.indexOf('zh') === 0 ? 'zh' : 'en';
+    }
+    if (want === pageLang) return;
+
+    var target = want === 'en' ? '/en/' : '/';
+    if (location.pathname === target) return;
+    location.replace(target + location.hash);
+  })();
+
   /* ── 1. 頁首捲動狀態 ─────────────────────────────── */
   var hdr = document.getElementById('hdr');
 
